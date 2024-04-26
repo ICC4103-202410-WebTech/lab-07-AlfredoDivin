@@ -47,13 +47,15 @@ Make sure to create the relationships between the tables, so the database is pop
 1. Find all the posts that belong to a user with the name "John Doe".
 
 ```ruby
-### Code here
+### user = User.find_by(name: "John Doe")
+### posts = user.posts if user
 ```
 
 2. Find all the tags that belong to a post with the title "Post 1".
 
 ```ruby
-### Code here
+### post = Post.find_by(title: "Post 1")
+### tags = post.tags if post
 ```
 
 3. Find all users that have a post with the tag "Tag 1".
