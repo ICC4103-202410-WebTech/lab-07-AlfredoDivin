@@ -61,5 +61,6 @@ Make sure to create the relationships between the tables, so the database is pop
 3. Find all users that have a post with the tag "Tag 1".
 
 ```ruby
-### Code here
+### users = User.joins(posts: :tags).where(tags: { name: 'Tag 1' }) 
+### users.each do |user| puts "User: #{user.name}" end
 ```
